@@ -503,7 +503,7 @@ if (Boolean(window.$) && check_page_allow()) {
 		if (mode == "eams")
 			semester = $("#courseTableForm input.calendar-text")[0].value;
 		else if (mode == "grad")
-			semester = $($($("#frmright")[0].contentDocument).find("#div-table div")[0]).html();
+			semester = document.getElementById("div-table").getElementsByTagName("div")[0].textContent;
 
 		$('#icsFormatterSemester').html(semester);
 		window.icsObj = icsFormatter();
