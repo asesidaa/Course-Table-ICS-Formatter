@@ -262,7 +262,7 @@ var mode = undefined;
 
 function check_page_allow() {
 	try {
-		rawdata = $($("#frmright")[0].contentDocument).find("#div-table tbody")[0];
+		rawdata = document.getElementById("tabCT").getElementsByTagName("tbody")[0];
 		mode = "grad";
 		return true;
 	}
